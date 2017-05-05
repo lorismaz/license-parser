@@ -195,8 +195,8 @@ open class FieldParser: FieldParsing{
   */
 
   open func parseString(_ key: String) -> String?{
-    let identifier = fieldMapper.fieldFor(key: key)
-    return regex.firstMatch(pattern: "\(identifier)(.+)\\b", data: data)
+    let identifier = fieldMapper.fieldFor(key)
+    return regex.firstMatch("\(identifier)(.+)\\b", data: data)
   }
 
   /**
@@ -208,8 +208,8 @@ open class FieldParser: FieldParsing{
     - Returns: An optional value parsed out of the raw data
   */
   open func parseDouble(_ key: String) -> Double?{
-    let identifier = fieldMapper.fieldFor(key: key)
-    let result = regex.firstMatch(pattern: "\(identifier)(\\w+)\\b", data: data)
+    let identifier = fieldMapper.fieldFor(key)
+    let result = regex.firstMatch("\(identifier)(\\w+)\\b", data: data)
     guard let unwrappedResult = result else { return nil }
 
     return Double(unwrappedResult)
@@ -223,7 +223,7 @@ open class FieldParser: FieldParsing{
 
     - Returns: An optional value parsed out of the raw data
   */
-  open func parseDate(key field: String) -> Date?{
+  open func parseDate(_ field: String) -> Date?{
     guard let dateString = parseString(field) else { return nil }
     guard !dateString.isEmpty else { return nil }
 
@@ -276,7 +276,7 @@ open class FieldParser: FieldParsing{
     - Returns: An optional value parsed out of the raw data
   */
   open func parseExpirationDate() -> Date?{
-    return parseDate(key: "expirationDate")
+    return parseDate("expirationDate")
   }
 
   /**
@@ -285,7 +285,7 @@ open class FieldParser: FieldParsing{
     - Returns: An optional value parsed out of the raw data
   */
   open func parseIssueDate() -> Date?{
-    return parseDate(key: "issueDate")
+    return parseDate("issueDate")
   }
 
   /**
@@ -294,7 +294,7 @@ open class FieldParser: FieldParsing{
     - Returns: An optional value parsed out of the raw data
   */
   open func parseDateOfBirth() -> Date?{
-    return parseDate(key: "dateOfBirth")
+    return parseDate("dateOfBirth")
   }
 
   /**
