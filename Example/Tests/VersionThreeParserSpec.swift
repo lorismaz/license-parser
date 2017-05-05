@@ -55,10 +55,10 @@ class VersionThreeParserSpec: QuickSpec{
     }
   }
 
-  func formattedDate(date: String) -> NSDate?{
-    let formatter = NSDateFormatter()
+  func formattedDate(_ date: String) -> Date?{
+    let formatter = DateFormatter()
     formatter.dateFormat = "yyyyMMdd"
-    let expectedDate = formatter.dateFromString(date)
+    let expectedDate = formatter.date(from: date)
 
     return expectedDate
   }

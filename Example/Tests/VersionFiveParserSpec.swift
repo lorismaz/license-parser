@@ -50,10 +50,10 @@ class VersionFiveParserSpec: QuickSpec{
     }
   }
 
-  func dateFromString(dateString: String, dateFormat: String) -> NSDate?{
-    let formatter = NSDateFormatter()
+  func dateFromString(_ dateString: String, dateFormat: String) -> Date?{
+    let formatter = DateFormatter()
     formatter.dateFormat = dateFormat
-    guard let parsedDate = formatter.dateFromString(dateString) else { return nil }
+    guard let parsedDate = formatter.date(from: dateString) else { return nil }
 
     return parsedDate
   }
