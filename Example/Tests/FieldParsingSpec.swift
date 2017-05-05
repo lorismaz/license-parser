@@ -36,14 +36,14 @@ class FieldParsingSpec: QuickSpec {
         it("should reveal an unknown suffix"){
           let sut = LicenseParser.Parser(data: "DCU\n")
           let result: LicenseParser.ParsedLicense = sut.parse()
-          expect(result.suffix).to(equal(LicenseParser.NameSuffix.Unknown))
+          expect(result.suffix).to(equal(LicenseParser.NameSuffix.unknown))
         }
       }
       context("when the suffix is missing"){
         it("should reveal an unknown suffix"){
           let sut = LicenseParser.Parser(data: "")
           let result: LicenseParser.ParsedLicense = sut.parse()
-          expect(result.suffix).to(equal(LicenseParser.NameSuffix.Unknown))
+          expect(result.suffix).to(equal(LicenseParser.NameSuffix.unknown))
         }
       }
     }
@@ -156,14 +156,14 @@ class FieldParsingSpec: QuickSpec {
         it("should reveal an unknown hair color"){
           let sut = LicenseParser.Parser(data: "DAZ\n")
           let result: LicenseParser.ParsedLicense = sut.parse()
-          expect(result.hairColor).to(equal(LicenseParser.HairColor.Unknown))
+          expect(result.hairColor).to(equal(LicenseParser.HairColor.unknown))
         }
       }
       context("when the hair color is missing"){
         it("should reveal an unknown hair color"){
           let sut = LicenseParser.Parser(data: "")
           let result: LicenseParser.ParsedLicense = sut.parse()
-          expect(result.hairColor).to(equal(LicenseParser.HairColor.Unknown))
+          expect(result.hairColor).to(equal(LicenseParser.HairColor.unknown))
         }
       }
     }
@@ -190,14 +190,14 @@ class FieldParsingSpec: QuickSpec {
         it("should reveal an unknown issuing country"){
           let sut = LicenseParser.Parser(data: "DCG\n")
           let result: LicenseParser.ParsedLicense = sut.parse()
-          expect(result.country).to(equal(LicenseParser.IssuingCountry.Unknown))
+          expect(result.country).to(equal(LicenseParser.IssuingCountry.unknown))
         }
       }
       context("when the country is missing"){
         it("should reveal nothing for the country"){
           let sut = LicenseParser.Parser(data: "DCF\n")
           let result: LicenseParser.ParsedLicense = sut.parse()
-          expect(result.country).to(equal(LicenseParser.IssuingCountry.Unknown))
+          expect(result.country).to(equal(LicenseParser.IssuingCountry.unknown))
         }
       }
     }
@@ -327,14 +327,14 @@ class FieldParsingSpec: QuickSpec {
         it("should reveal an unknown eye color"){
           let sut = LicenseParser.Parser(data: "DAY\n")
           let result: LicenseParser.ParsedLicense = sut.parse()
-          expect(result.eyeColor).to(equal(LicenseParser.EyeColor.Unknown))
+          expect(result.eyeColor).to(equal(LicenseParser.EyeColor.unknown))
         }
       }
       context("when the eye color is missing"){
         it("should reveal an unknown eye color"){
           let sut = LicenseParser.Parser(data: "")
           let result: LicenseParser.ParsedLicense = sut.parse()
-          expect(result.eyeColor).to(equal(LicenseParser.EyeColor.Unknown))
+          expect(result.eyeColor).to(equal(LicenseParser.EyeColor.unknown))
         }
       }
     }
@@ -344,14 +344,14 @@ class FieldParsingSpec: QuickSpec {
         it("should reveal the gender as unknown"){
           let sut = LicenseParser.Parser(data: self.emptyLicenseData())
           let result: LicenseParser.ParsedLicense = sut.parse()
-          expect(result.gender).to(equal(LicenseParser.Gender.Unknown))
+          expect(result.gender).to(equal(LicenseParser.Gender.unknown))
         }
       }
       context("when the gender field is missing"){
         it("should reveal the gender as unknown"){
           let sut = LicenseParser.Parser(data: "")
           let result: LicenseParser.ParsedLicense = sut.parse()
-          expect(result.gender).to(equal(LicenseParser.Gender.Unknown))
+          expect(result.gender).to(equal(LicenseParser.Gender.unknown))
         }
       }
     }
@@ -367,7 +367,7 @@ class FieldParsingSpec: QuickSpec {
         it("should reveal the correct truncation status"){
           let sut = LicenseParser.Parser(data: "DDFU\n")
           let result: LicenseParser.ParsedLicense = sut.parse()
-          expect(result.firstNameTruncation).to(equal(LicenseParser.Truncation.Unknown))
+          expect(result.firstNameTruncation).to(equal(LicenseParser.Truncation.unknown))
         }
 
       }
@@ -381,7 +381,7 @@ class FieldParsingSpec: QuickSpec {
         it("should reveal the correct truncation status"){
           let sut = LicenseParser.Parser(data: "DDFU\n")
           let result: LicenseParser.ParsedLicense = sut.parse()
-          expect(result.firstNameTruncation).to(equal(LicenseParser.Truncation.Unknown))
+          expect(result.firstNameTruncation).to(equal(LicenseParser.Truncation.unknown))
         }
 
       }
@@ -415,7 +415,7 @@ class FieldParsingSpec: QuickSpec {
         it("should reveal the correct truncation status"){
           let sut = LicenseParser.Parser(data: "DDGU\n")
           let result: LicenseParser.ParsedLicense = sut.parse()
-          expect(result.middleNameTruncation).to(equal(LicenseParser.Truncation.Unknown))
+          expect(result.middleNameTruncation).to(equal(LicenseParser.Truncation.unknown))
         }
       }
       context("when the middle name field is missing"){
@@ -427,7 +427,7 @@ class FieldParsingSpec: QuickSpec {
         it("should reveal the correct truncation status"){
           let sut = LicenseParser.Parser(data: "DDGU\n")
           let result: LicenseParser.ParsedLicense = sut.parse()
-          expect(result.middleNameTruncation).to(equal(LicenseParser.Truncation.Unknown))
+          expect(result.middleNameTruncation).to(equal(LicenseParser.Truncation.unknown))
         }
       }
     }

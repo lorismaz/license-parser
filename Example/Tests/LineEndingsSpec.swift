@@ -57,15 +57,15 @@ class LineEndingsSpec: QuickSpec{
           expect(result.lastName).to(equal("PUBLIC"))
           expect(result.middleName).to(equal("QUINCY"))
           expect(result.firstName).to(equal("JOHN"))
-          expect(result.eyeColor).to(equal(EyeColor.Green))
+          expect(result.eyeColor).to(equal(EyeColor.green))
           expect(result.streetAddress).to(equal("789 E OAK ST"))
           expect(result.streetAddressSupplement).to(equal("APT #4A"))
           expect(result.height).to(equal(69))
           expect(result.city).to(equal("ANYTOWN"))
           expect(result.state).to(equal("CA"))
           expect(result.postalCode).to(equal("902230000"))
-          expect(result.hairColor).to(equal(HairColor.Brown))
-          expect(result.country).to(equal(IssuingCountry.UnitedStates))
+          expect(result.hairColor).to(equal(HairColor.brown))
+          expect(result.country).to(equal(IssuingCountry.unitedStates))
           expect(result.customerId).to(equal("D12345678"))
         }
       }

@@ -22,7 +22,7 @@ class DriverLicenseNameSpec: QuickSpec{
         expect(result.firstName).to(equal("JOHN"))
         expect(result.middleName).to(equal("QUINCY"))
         expect(result.lastName).to(equal("PUBLIC"))
-        expect(result.suffix).to(equal(NameSuffix.Second))
+        expect(result.suffix).to(equal(NameSuffix.second))
       }
     }
   }
