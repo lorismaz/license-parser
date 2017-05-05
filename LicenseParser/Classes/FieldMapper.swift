@@ -13,14 +13,14 @@ public protocol FieldMapping{
 
     - Returns: The AAMVA field designator
   */
-  func fieldFor(key: String) -> String
+  func fieldFor(_ key: String) -> String
 }
 
 /// A basic Field Mapping implementation based on the AAMVA Version 8 standard
-public class FieldMapper: FieldMapping{
+open class FieldMapper: FieldMapping{
 
   /// A list of AAMVA field designator mappings (e.g. "firstName" => "DAC")
-  public var fields: [String: String] = [
+  open var fields: [String: String] = [
     "firstName"               : "DAC",
     "lastName"                : "DCS",
     "middleName"              : "DAD",
@@ -59,7 +59,7 @@ public class FieldMapper: FieldMapping{
 
     - Returns: The AAMVA field designator
   */
-  public func fieldFor(key: String) -> String {
+  open func fieldFor(_ key: String) -> String {
     guard fields.keys.contains(key) else { return "" }
 
     return fields[key]!

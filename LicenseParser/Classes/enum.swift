@@ -9,13 +9,13 @@ import Foundation
 */
 public enum IssuingCountry{
   /// The United States
-  case UnitedStates
+  case unitedStates
 
   /// Canada
-  case Canada
+  case canada
 
   /// Unknown Issuing Country
-  case Unknown
+  case unknown
 }
 
 /**
@@ -29,16 +29,16 @@ public enum IssuingCountry{
 public enum Gender{
 
   /// Male
-  case Male
+  case male
 
   /// Female
-  case Female
+  case female
 
   /// Other
-  case Other
+  case other
 
   /// Unknown Gender
-  case Unknown
+  case unknown
 }
 
 /**
@@ -57,25 +57,25 @@ public enum Gender{
 */
 public enum EyeColor{
   /// Black eye color
-  case Black
+  case black
   /// Blue eye color
-  case Blue
+  case blue
   /// Brown eye color
-  case Brown
+  case brown
   /// Gray eye color
-  case Gray
+  case gray
   /// Green eye color
-  case Green
+  case green
   /// Hazel eye color
-  case Hazel
+  case hazel
   /// Maroon eye color
-  case Maroon
+  case maroon
   /// Pink eye color
-  case Pink
+  case pink
   /// Dichromatic eye color
-  case Dichromatic
+  case dichromatic
   /// Unknown eye color
-  case Unknown
+  case unknown
 }
 
 /**
@@ -93,23 +93,23 @@ public enum EyeColor{
 */
 public enum HairColor{
   /// Bald hair color
-  case Bald
+  case bald
   /// Black hair color
-  case Black
+  case black
   /// Blond hair color
-  case Blond
+  case blond
   /// Brown hair color
-  case Brown
+  case brown
   /// Grey hair color
-  case Grey
+  case grey
   /// Red hair color
-  case Red
+  case red
   /// Sandy hair color
-  case Sandy
+  case sandy
   /// White hair color
-  case White
+  case white
   /// Unknown hair color
-  case Unknown
+  case unknown
 }
 
 /**
@@ -121,11 +121,11 @@ public enum HairColor{
 */
 public enum Truncation{
   /// Truncated Name
-  case Truncated
+  case truncated
   /// Not Truncated
-  case None
+  case none
   /// Unknown Truncation
-  case Unknown
+  case unknown
 }
 
 /**
@@ -146,27 +146,27 @@ public enum Truncation{
 */
 public enum NameSuffix{
   /// Junior, Jr.
-  case Junior
+  case junior
   /// Senior, Sr.
-  case Senior
+  case senior
   /// First, I, 1st
-  case First
+  case first
   /// Second, II, 2nd
-  case Second
+  case second
   /// Third, III, 3rd
-  case Third
+  case third
   /// Fourth, IV, 4th
-  case Fourth
+  case fourth
   /// Fifth, V, 5th
-  case Fifth
+  case fifth
   /// Sixth, VI, 6th
-  case Sixth
+  case sixth
   /// Seventh, VII, 7th
-  case Seventh
+  case seventh
   /// Eighth, VIII, 8th
-  case Eighth
+  case eighth
   /// Ninth, IX, 9th
-  case Ninth
+  case ninth
   /// When the name suffix is unknown
-  case Unknown
+  case unknown
 }
